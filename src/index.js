@@ -33,6 +33,7 @@ class Speedometer extends Component {
       minValue,
       maxValue,
       easeDuration,
+      easingType,
       allowedDecimals,
       labels,
       needleImage,
@@ -57,7 +58,7 @@ class Speedometer extends Component {
       {
         toValue: limitValue(value, minValue, maxValue, allowedDecimals),
         duration: easeDuration,
-        easing: Easing.linear,
+        easing: easingType,
         useNativeDriver,
       },
     ).start();
@@ -146,6 +147,7 @@ Speedometer.defaultProps = {
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
+  easingType:Easing.linear,
   allowedDecimals: 0,
   labels: [
     {
@@ -199,6 +201,7 @@ Speedometer.propTypes = {
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
   easeDuration: PropTypes.number,
+  easingType:PropTypes.object,
   allowedDecimals: PropTypes.number,
   labels: PropTypes.array,
   needleImage: PropTypes.any,

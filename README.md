@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
 | maxValue | 100 | number | Maximum Value |
 | allowedDecimals | 0 | number | Allowed Decimal Places |
 | easeDuration | 500| number | Ease Duration for the Needle animation |
+| easingType | Easing.linear | Easing Type for the Needle animation |
 | labels | [Default Labels](#defaults) | array | Labels List |
 | needleImage | [Default Needle Image](#defaults) | string | Absolute path to the Needle Image |
 | wrapperStyle | {} | object | Wrapper Style |
@@ -95,6 +96,7 @@ const styles = StyleSheet.create({
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
+  easingType: Easing.linear,
   labels: [
     {
       name: 'Too Slow',
